@@ -1,25 +1,32 @@
-// Online C compiler to run C program online
+
 #include <stdio.h>
 
 int main() {
-    int i,j,key;
-    int arr[6]={31,41,59,26,41,58};
-    int len =sizeof(arr)/sizeof(arr[0]);
-    for(j=1;j<len;j++)
+    int arr[5] = {2,5,1,4,1};
+    int len = sizeof(arr)/sizeof(arr[1]);
+  
+  // Loop over the given array and exchange if key < previous integer
+   for(int i=2;i<len;i++)
     {
-        i=j-1;
-        key=arr[j];
-        while(i>=0 && arr[i]<key)
+        int key=arr[i];
+        int j= i-1;
+        
+        while( key<arr[j])
         {
-            arr[i+1]=arr[i];
-            arr[i]=key;
-            i--;
+            
+            arr[j+1]=arr[j];
+            arr[j]=key;
+            j--;
         }
         
+        
+        
     }
-    for(i=0;i<len;i++)
+    
+    // Print the sorted array
+    for( int i=0;i<len;i++)
     {
-      printf("%d\n",arr[i]);  
+        printf("%d",arr[i]);
     }
 
     return 0;
