@@ -6,7 +6,7 @@ int main() {
     int len = sizeof(arr)/sizeof(arr[1]);
   
   // Loop over the given array and exchange if key < previous integer
-   for(int i=2;i<len;i++)
+   for(int i=1;i<len;i++)
     {
         int key=arr[i];
         int j= i-1;
